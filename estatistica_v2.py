@@ -123,11 +123,11 @@ print("Salvando arquivos XLS... \n")
 df_numerico.to_excel("dados_numericos.xlsx", index=False)
 df_textual.to_excel("dados_textuais.xlsx", index=False)
 
-# with open("dados_numericos.json", "w", encoding="utf-8") as f:
-#     json.dump(dados_numericos, f, ensure_ascii=False, indent=4)
+with open("dados_numericos.json", "w", encoding="utf-8") as f:
+    json.dump(dados_numericos, f, ensure_ascii=False, indent=4)
 
-# with open("dados_textuais.json", "w", encoding="utf-8") as f:
-#     json.dump(dados_textuais, f, ensure_ascii=False, indent=4)
+with open("dados_textuais.json", "w", encoding="utf-8") as f:
+    json.dump(dados_textuais, f, ensure_ascii=False, indent=4)
 
 
 # ====== FUNÇÕES PARA VARIÁVEIS QUANTITATIVAS ======
@@ -369,8 +369,14 @@ resultados_relacionaveis["perfil_clusters"] = perfil_clusters.to_dict(orient="in
 # === SALVAR XLS
 print("Salvandos dados calculados em XLS... \n")
 
-# resultados_quantitativos = resultados_quantitativos.round(2)
-# resultados_relacionaveis = resultados_relacionaveis.round(2)
+# with open("resultados_quantitativos.json", "w", encoding="utf-8") as f:
+#     json.dump(resultados_quantitativos, f, indent=4, ensure_ascii=False)
+
+# with open("resultados_categoricos.json", "w", encoding="utf-8") as f:
+#     json.dump(resultados_categoricos, f, indent=4, ensure_ascii=False)
+
+# with open("resultados_relacionaveis.json", "w", encoding="utf-8") as f:
+#     json.dump(resultados_relacionaveis, f, indent=4, ensure_ascii=False)
 
 # Quantitativos
 df_quant = pd.DataFrame(resultados_quantitativos).T
