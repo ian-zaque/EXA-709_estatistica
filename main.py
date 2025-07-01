@@ -2,7 +2,9 @@ import questionario
 import utils
 import pandas as pd
 import json
+import os
 
+# os.makedirs("DB/", exist_ok=True)
 rotulos_questoes = questionario.rotulos_questoes
 
 # Limites e tipos de respostas
@@ -83,39 +85,74 @@ for q in questoes_cat:
 
 print("Calculando dados relacionaveis... \n")
 
+# === RELACIONÁVEIS ===
 # 1. Correlação entre idade e tempo de uso do computador
 pares_correlacao = [("Q1", "Q9")]
 for col1, col2 in pares_correlacao:
-    resultados_relacionaveis[f"correlacao_{col1}_{col2}"] = utils.pearson_corr(float_df_numericos, col1, col2)
+    resultado = utils.pearson_corr(float_df_numericos, col1, col2)
+    resultados_relacionaveis[f"correlacao_{col1}_{col2}"] = resultado
+    
+    with open(f"DB/correlacao_{col1}_{col2}.txt", "w", encoding="utf-8") as f:
+        f.write(f"Correlação de Pearson entre {col1} - {rotulos_questoes[int(col1[1:])]} e {col2} - {rotulos_questoes[int(col2[1:])]}\n")
+        f.write(f"Coeficiente de correlação: {resultado['correlação_pearson']:.4f}\n")
+        f.write(f"p-valor: {resultado['p_valor']:.4g}\n")
 
-# 2. Associação entre trabalhar e uso da internet para trabalho
+# 2. Relação entre trabalhar e uso da internet para trabalho
 pares_qui2 = [("Q6", "Q14"), ("Q24", "Q16")]
 for col1, col2 in pares_qui2:
-    resultados_relacionaveis[f"qui_quadrado_{col1}_{col2}"] = utils.qui_quadrado(float_df_numericos, col1, col2)
+    resultado = utils.qui_quadrado(float_df_numericos, col1, col2)
+    resultados_relacionaveis[f"qui_quadrado_{col1}_{col2}"] = resultado
 
-# 3. Associação entre dispositivo e tempo conectado (média por grupo)
+    with open(f"DB/qui_quadrado_{col1}_{col2}.txt", "w", encoding="utf-8") as f:
+        f.write(f"Relação entre {col1} - {rotulos_questoes[int(col1[1:])]} e {col2} - {rotulos_questoes[int(col2[1:])]}\n")
+        f.write(f"Qui-quadrado: {resultado['qui2']:.4f}\n")
+        f.write(f"p-valor: {resultado['p_valor']:.4g}\n")
+
+# 3. Média por grupo (ex: dispositivo e tempo conectado)
 pares_media = [("Q12", "Q13")]
 for grupo_col, valor_col in pares_media:
-    resultados_relacionaveis[f"media_{valor_col}_por_{grupo_col}"] = utils.media_por_grupo(float_df_numericos, grupo_col, valor_col)
+    resultado = utils.media_por_grupo(float_df_numericos, grupo_col, valor_col)
+    resultados_relacionaveis[f"media_{valor_col}_por_{grupo_col}"] = resultado
 
-# 4. Comparação de médias por sexo (teste t)
+    with open(f"DB/media_{valor_col}_por_{grupo_col}.txt", "w", encoding="utf-8") as f:
+        f.write(f"Média de {valor_col} - {rotulos_questoes[int(valor_col[1:])]} por grupo de {grupo_col} - {rotulos_questoes[int(grupo_col[1:])]}\n")
+        for grupo, media in resultado.items():
+            f.write(f"Grupo {grupo}: média = {media:.2f}\n")
+
+# 4. Teste t (comparação entre grupos)
 pares_teste_t = [("Q2", "Q13")]
-for grupo_col, valor_col in pares_teste_t:
-    resultados_relacionaveis[f"teste_t_{valor_col}_por_{grupo_col}"] = utils.teste_t_por_grupo(float_df_numericos, grupo_col, valor_col)
+rotulos_q12 = {1: "Celular", 2: "Tablet", 3: "Computador/Notebook"}
+for grupo_col, valor_col in pares_media:
+    resultado = utils.media_por_grupo(float_df_numericos, grupo_col, valor_col)
+    resultados_relacionaveis[f"media_{valor_col}_por_{grupo_col}"] = resultado
+
+    with open(f"DB/media_{valor_col}_por_{grupo_col}.txt", "w", encoding="utf-8") as f:
+        f.write(f"Média de {valor_col} - {rotulos_questoes[int(valor_col[1:])]} por tipo de {grupo_col} - {rotulos_questoes[int(grupo_col[1:])]}\n\n")
+        for grupo, media in resultado.items():
+            rotulo = rotulos_q12.get(int(grupo), f"Grupo {grupo}")
+            f.write(f"Média {rotulo}: {media:.2f}\n")
 
 # 5. Clusterização
 colunas_cluster = [f"Q{i}" for i in range(5, 27)]
 float_df_numericos["cluster"], perfil_clusters = utils.clusterizar(float_df_numericos, colunas_cluster)
 resultados_relacionaveis["perfil_clusters"] = perfil_clusters.to_dict(orient="index")
 
-# === SALVAR XLS
-print("Salvandos dados calculados em XLS... \n")
+with open("DB/perfil_clusters.txt", "w", encoding="utf-8") as f:
+    f.write("Perfil médio por cluster com base nas questões Q5 a Q26\n\n")
+    for cluster_id, perfil in perfil_clusters.iterrows():
+        f.write(f"Cluster {cluster_id+1}:\n")
+        for col, val in perfil.items():
+            f.write(f"  {col} ({rotulos_questoes.get(int(col[1:]), col)}): {val:.2f}\n")
+        f.write("\n")
+
+# === SALVAR EM XLS
+print("Salvando dados calculados em XLS...\n")
 
 # Quantitativos
 df_quant = pd.DataFrame(resultados_quantitativos).T
 df_quant.to_excel("DB/resultados_quantitativos.xlsx")
 
-# Qualitativos (colocando cada resultado como string json para caber na célula do Excel)
+# Qualitativos
 df_cat = pd.DataFrame({k: {sk: str(v[sk]) for sk in v} for k, v in resultados_qualitativos.items()}).T
 df_cat.to_excel("DB/resultados_qualitativos.xlsx")
 

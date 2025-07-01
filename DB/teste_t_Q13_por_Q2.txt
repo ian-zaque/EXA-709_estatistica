@@ -1,0 +1,5 @@
+Teste t de Q13 - Tempo conectado por dia (horas) por Q2 - Sexo
+Média do grupo 1: 5.00
+Média do grupo 2: 5.00
+Estatística t: 1.0000
+p-valor: 0
