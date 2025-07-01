@@ -1,3 +1,3 @@
 Relação entre Q6 - Você trabalha? e Q14 - Você utiliza a internet para trabalho?
-Qui-quadrado: 0.5500
-p-valor: 0.46
+Qui-quadrado: 0.1800
+p-valor: 0.67

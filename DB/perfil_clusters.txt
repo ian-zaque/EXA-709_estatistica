@@ -1,74 +1,74 @@
 Perfil médio por cluster com base nas questões Q5 a Q26
 
 Cluster 1:
-  Q5 (Período (1-Diurno / 2-Noturno)): 1.00
-  Q6 (Você trabalha?): 1.51
-  Q7 (Tempo de estudo diário (horas)): 4.00
-  Q8 (Mora com quem?): 1.99
-  Q9 (Há quanto tempo utiliza computador?): 14.06
-  Q10 (Você costuma acessar a Internet?): 1.51
-  Q11 (Quanto tempo estuda na internet (horas)): 3.92
-  Q12 (Dispositivo móvel mais acessado): 2.01
-  Q13 (Tempo conectado por dia (horas)): 5.54
-  Q14 (Você utiliza a internet para trabalho?): 1.52
-  Q15 (Você utiliza a internet para conversar com amigos?): 1.50
-  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.50
-  Q17 (Você utiliza a internet para acessar e-mail?): 1.52
-  Q18 (Você utiliza a internet para pesquisas acadêmicas?): 1.48
-  Q19 (Você utiliza a internet para acessar notícias?): 1.49
-  Q20 (Você utiliza a internet para fazer compras online?): 1.51
-  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.49
-  Q22 (Você utiliza a internet para participar de jogos online?): 1.51
-  Q23 (Você acredita que a internet atrapalha sua formação?): 1.50
-  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.52
-  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.52
-  Q26 (O que o computador representa para você?): 2.01
+  Q5 (Período (1-Diurno / 2-Noturno)): 1.06
+  Q6 (Você trabalha?): 1.64
+  Q7 (Tempo de estudo diário (horas)): 4.39
+  Q8 (Mora com quem?): 2.06
+  Q9 (Há quanto tempo utiliza computador?): 13.53
+  Q10 (Você costuma acessar a Internet?): 1.44
+  Q11 (Quanto tempo estuda na internet (horas)): 3.61
+  Q12 (Dispositivo móvel mais acessado): 2.12
+  Q13 (Tempo conectado por dia (horas)): 5.59
+  Q14 (Você utiliza a internet para trabalho?): 1.11
+  Q15 (Você utiliza a internet para conversar com amigos?): 1.41
+  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.59
+  Q17 (Você utiliza a internet para acessar e-mail?): 1.45
+  Q18 (Você utiliza a internet para pesquisas acadêmicas?): 1.58
+  Q19 (Você utiliza a internet para acessar notícias?): 1.59
+  Q20 (Você utiliza a internet para fazer compras online?): 1.62
+  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.56
+  Q22 (Você utiliza a internet para participar de jogos online?): 1.68
+  Q23 (Você acredita que a internet atrapalha sua formação?): 1.36
+  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.59
+  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.44
+  Q26 (O que o computador representa para você?): 2.03
 
 Cluster 2:
-  Q5 (Período (1-Diurno / 2-Noturno)): 2.00
-  Q6 (Você trabalha?): 1.45
-  Q7 (Tempo de estudo diário (horas)): 4.31
-  Q8 (Mora com quem?): 2.01
-  Q9 (Há quanto tempo utiliza computador?): 13.27
-  Q10 (Você costuma acessar a Internet?): 1.49
-  Q11 (Quanto tempo estuda na internet (horas)): 3.93
-  Q12 (Dispositivo móvel mais acessado): 1.31
-  Q13 (Tempo conectado por dia (horas)): 5.29
-  Q14 (Você utiliza a internet para trabalho?): 1.54
-  Q15 (Você utiliza a internet para conversar com amigos?): 1.51
-  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.44
-  Q17 (Você utiliza a internet para acessar e-mail?): 1.53
-  Q18 (Você utiliza a internet para pesquisas acadêmicas?): 1.49
-  Q19 (Você utiliza a internet para acessar notícias?): 1.41
-  Q20 (Você utiliza a internet para fazer compras online?): 1.50
-  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.51
-  Q22 (Você utiliza a internet para participar de jogos online?): 1.55
-  Q23 (Você acredita que a internet atrapalha sua formação?): 1.47
-  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.46
-  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.47
-  Q26 (O que o computador representa para você?): 2.02
+  Q5 (Período (1-Diurno / 2-Noturno)): 1.80
+  Q6 (Você trabalha?): 1.59
+  Q7 (Tempo de estudo diário (horas)): 4.04
+  Q8 (Mora com quem?): 2.07
+  Q9 (Há quanto tempo utiliza computador?): 12.77
+  Q10 (Você costuma acessar a Internet?): 1.60
+  Q11 (Quanto tempo estuda na internet (horas)): 4.83
+  Q12 (Dispositivo móvel mais acessado): 1.81
+  Q13 (Tempo conectado por dia (horas)): 6.05
+  Q14 (Você utiliza a internet para trabalho?): 1.65
+  Q15 (Você utiliza a internet para conversar com amigos?): 1.29
+  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.43
+  Q17 (Você utiliza a internet para acessar e-mail?): 1.69
+  Q18 (Você utiliza a internet para pesquisas acadêmicas?): 1.30
+  Q19 (Você utiliza a internet para acessar notícias?): 1.46
+  Q20 (Você utiliza a internet para fazer compras online?): 1.65
+  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.53
+  Q22 (Você utiliza a internet para participar de jogos online?): 1.66
+  Q23 (Você acredita que a internet atrapalha sua formação?): 1.61
+  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.35
+  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.48
+  Q26 (O que o computador representa para você?): 2.07
 
 Cluster 3:
-  Q5 (Período (1-Diurno / 2-Noturno)): 2.00
-  Q6 (Você trabalha?): 1.52
-  Q7 (Tempo de estudo diário (horas)): 3.73
-  Q8 (Mora com quem?): 1.99
-  Q9 (Há quanto tempo utiliza computador?): 14.99
-  Q10 (Você costuma acessar a Internet?): 1.49
-  Q11 (Quanto tempo estuda na internet (horas)): 4.07
-  Q12 (Dispositivo móvel mais acessado): 2.64
-  Q13 (Tempo conectado por dia (horas)): 5.73
-  Q14 (Você utiliza a internet para trabalho?): 1.47
-  Q15 (Você utiliza a internet para conversar com amigos?): 1.52
-  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.55
-  Q17 (Você utiliza a internet para acessar e-mail?): 1.49
+  Q5 (Período (1-Diurno / 2-Noturno)): 1.65
+  Q6 (Você trabalha?): 1.35
+  Q7 (Tempo de estudo diário (horas)): 2.81
+  Q8 (Mora com quem?): 2.00
+  Q9 (Há quanto tempo utiliza computador?): 15.84
+  Q10 (Você costuma acessar a Internet?): 1.62
+  Q11 (Quanto tempo estuda na internet (horas)): 3.54
+  Q12 (Dispositivo móvel mais acessado): 2.13
+  Q13 (Tempo conectado por dia (horas)): 4.69
+  Q14 (Você utiliza a internet para trabalho?): 1.60
+  Q15 (Você utiliza a internet para conversar com amigos?): 1.81
+  Q16 (Você utiliza a internet para conversar com desconhecidos?): 1.46
+  Q17 (Você utiliza a internet para acessar e-mail?): 1.41
   Q18 (Você utiliza a internet para pesquisas acadêmicas?): 1.49
-  Q19 (Você utiliza a internet para acessar notícias?): 1.62
-  Q20 (Você utiliza a internet para fazer compras online?): 1.50
-  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.51
-  Q22 (Você utiliza a internet para participar de jogos online?): 1.46
-  Q23 (Você acredita que a internet atrapalha sua formação?): 1.56
-  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.56
-  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.54
-  Q26 (O que o computador representa para você?): 1.99
+  Q19 (Você utiliza a internet para acessar notícias?): 1.41
+  Q20 (Você utiliza a internet para fazer compras online?): 1.18
+  Q21 (Você utiliza a internet para assistir a vídeos online?): 1.47
+  Q22 (Você utiliza a internet para participar de jogos online?): 1.32
+  Q23 (Você acredita que a internet atrapalha sua formação?): 1.41
+  Q24 (Você considera as redes sociais um ambiente tóxico?): 1.74
+  Q25 (Você utiliza a internet para fazer download de conteúdo?): 1.47
+  Q26 (O que o computador representa para você?): 1.82
 

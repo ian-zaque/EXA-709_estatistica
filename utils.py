@@ -11,7 +11,7 @@ rotulos_questoes = questionario.rotulos_questoes
 limites = questionario.limites
 de_para = questionario.de_para
 plt.rcParams["figure.figsize"] = (12, 8)
-TOTAL_NUMBER = 6000
+TOTAL_NUMBER = 217
 
 # ====== FUNÇÕES PARA VARIÁVEIS QUANTITATIVAS ======
 def contagem(df, coluna):
@@ -136,7 +136,7 @@ def grafico_barras(df, coluna):
     plt.grid(axis='y')
     
     for i, v in enumerate(codigos.values):
-        plt.text(i, v + 0.02, f'{v:.2f}', ha='center', va='bottom')
+        plt.text(i, v + 0.02, f'{v:.0f}', ha='center', va='bottom')
 
     # plt.tight_layout()
     plt.savefig(f'DB/barras_{coluna}.png')

@@ -1,18 +1,18 @@
-ESTATÍSTICAS DESCRITIVAS - QUESTÕES QUANTITATIVAS
+QUESTÕES QUANTITATIVAS
 ======================================================================
 
 Questão Q1 - Idade (anos)
 ------------------------------------------------------------
-Contagem: 6000
-Média: 22.96
+Contagem: 217
+Média: 22.95
 Mediana: 23.0
-Moda: 18.0
+Moda: 23.0
 Mínimo: 17.0
 Máximo: 29.0
 Intervalo: 12.0
-Desvio padrão: 3.78
-Variância: 14.28
-Coeficiente de variação: 0.16
+Desvio padrão: 3.49
+Variância: 12.17
+Coeficiente de variação: 0.15
 Quartis:
   Q1: 20.0
   Q2: 23.0
@@ -22,92 +22,92 @@ IQR: 6.0
 
 Questão Q3 - Semestre que está cursando
 ------------------------------------------------------------
-Contagem: 6000
-Média: 6.49
-Mediana: 6.0
-Moda: 5.0
+Contagem: 217
+Média: 6.21
+Mediana: 5.0
+Moda: 3.0
 Mínimo: 1.0
 Máximo: 12.0
 Intervalo: 11.0
-Desvio padrão: 3.46
-Variância: 11.94
-Coeficiente de variação: 0.53
+Desvio padrão: 3.63
+Variância: 13.19
+Coeficiente de variação: 0.58
 Quartis:
-  Q1: 4.0
-  Q2: 6.0
+  Q1: 3.0
+  Q2: 5.0
   Q3: 10.0
   Q4: 12.0
-IQR: 6.0
+IQR: 7.0
 
 Questão Q4 - Renda familiar
 ------------------------------------------------------------
-Contagem: 6000
-Média: 4.45
-Mediana: 4.0
-Moda: 4.0
+Contagem: 217
+Média: 4.57
+Mediana: 5.0
+Moda: 5.0
 Mínimo: 1.0
 Máximo: 8.0
 Intervalo: 7.0
-Desvio padrão: 2.28
-Variância: 5.21
-Coeficiente de variação: 0.51
+Desvio padrão: 2.14
+Variância: 4.58
+Coeficiente de variação: 0.47
 Quartis:
-  Q1: 2.0
-  Q2: 4.0
+  Q1: 3.0
+  Q2: 5.0
   Q3: 6.0
   Q4: 8.0
-IQR: 4.0
+IQR: 3.0
 
 Questão Q7 - Tempo de estudo diário (horas)
 ------------------------------------------------------------
-Contagem: 6000
-Média: 4.01
+Contagem: 217
+Média: 3.76
 Mediana: 4.0
-Moda: 6.0
+Moda: 0.0
+Mínimo: 0.0
+Máximo: 8.0
+Intervalo: 8.0
+Desvio padrão: 2.81
+Variância: 7.9
+Coeficiente de variação: 0.75
+Quartis:
+  Q1: 1.0
+  Q2: 4.0
+  Q3: 6.0
+  Q4: 8.0
+IQR: 5.0
+
+Questão Q9 - Há quanto tempo utiliza computador?
+------------------------------------------------------------
+Contagem: 217
+Média: 13.96
+Mediana: 14.0
+Moda: 12.0
+Mínimo: 3.0
+Máximo: 25.0
+Intervalo: 22.0
+Desvio padrão: 6.48
+Variância: 41.93
+Coeficiente de variação: 0.46
+Quartis:
+  Q1: 9.0
+  Q2: 14.0
+  Q3: 20.0
+  Q4: 25.0
+IQR: 11.0
+
+Questão Q11 - Quanto tempo estuda na internet (horas)
+------------------------------------------------------------
+Contagem: 217
+Média: 4.06
+Mediana: 4.0
+Moda: 2.0
 Mínimo: 0.0
 Máximo: 8.0
 Intervalo: 8.0
 Desvio padrão: 2.59
 Variância: 6.73
-Coeficiente de variação: 0.65
-Quartis:
-  Q1: 2.0
-  Q2: 4.0
-  Q3: 6.0
-  Q4: 8.0
-IQR: 4.0
-
-Questão Q9 - Há quanto tempo utiliza computador?
-------------------------------------------------------------
-Contagem: 6000
-Média: 14.09
-Mediana: 14.0
-Moda: 23.0
-Mínimo: 3.0
-Máximo: 25.0
-Intervalo: 22.0
-Desvio padrão: 6.7
-Variância: 44.93
-Coeficiente de variação: 0.48
-Quartis:
-  Q1: 8.0
-  Q2: 14.0
-  Q3: 20.0
-  Q4: 25.0
-IQR: 12.0
-
-Questão Q11 - Quanto tempo estuda na internet (horas)
-------------------------------------------------------------
-Contagem: 6000
-Média: 3.96
-Mediana: 4.0
-Moda: 1.0
-Mínimo: 0.0
-Máximo: 8.0
-Intervalo: 8.0
-Desvio padrão: 2.57
-Variância: 6.6
-Coeficiente de variação: 0.65
+Coeficiente de variação: 0.64
 Quartis:
   Q1: 2.0
   Q2: 4.0
@@ -117,16 +117,16 @@ IQR: 4.0
 
 Questão Q13 - Tempo conectado por dia (horas)
 ------------------------------------------------------------
-Contagem: 6000
-Média: 5.52
+Contagem: 217
+Média: 5.48
 Mediana: 5.0
 Moda: 5.0
 Mínimo: 1.0
 Máximo: 10.0
 Intervalo: 9.0
-Desvio padrão: 2.87
-Variância: 8.26
-Coeficiente de variação: 0.52
+Desvio padrão: 2.99
+Variância: 8.93
+Coeficiente de variação: 0.55
 Quartis:
   Q1: 3.0
   Q2: 5.0
