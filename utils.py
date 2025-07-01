@@ -11,7 +11,7 @@ rotulos_questoes = questionario.rotulos_questoes
 limites = questionario.limites
 de_para = questionario.de_para
 plt.rcParams["figure.figsize"] = (12, 8)
-TOTAL_NUMBER = 10000
+TOTAL_NUMBER = 6000
 
 # ====== FUNÇÕES PARA VARIÁVEIS QUANTITATIVAS ======
 def contagem(df, coluna):
@@ -49,7 +49,8 @@ def quartis(df, coluna):
     return {
         'Q1': df[coluna].quantile(0.25).round(2),
         'Q2': df[coluna].quantile(0.50).round(2),
-        'Q3': df[coluna].quantile(0.75).round(2)
+        'Q3': df[coluna].quantile(0.75).round(2),
+        'Q4': df[coluna].quantile(1).round(2)
     }
 
 def iqr(df, coluna):
@@ -183,10 +184,10 @@ def teste_t_por_grupo(df, grupo_col, valor_col):
     grupo2 = df[df[grupo_col] == 2][valor_col]
     t_stat, p_valor = ttest_ind(grupo1, grupo2, equal_var=False)
     return {
-        "media_grupo_1": grupo1.mean().round(2),
-        "media_grupo_2": grupo2.mean().round(2),
-        "t_stat": t_stat.round(2),
-        "p_valor": p_valor.round(2)
+        "media_grupo_1": grupo1.mean().astype(int).round(2),
+        "media_grupo_2": grupo2.mean().astype(int).round(2),
+        "t_stat": t_stat.astype(int).round(2),
+        "p_valor": p_valor.astype(int).round(2)
     }
 
 def clusterizar(df, cols, n_clusters=3):

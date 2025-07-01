@@ -32,7 +32,7 @@ rotulos_questoes = {
 
 # Limites e tipos de respostas
 limites = {
-    1: lambda: random.randint(17, 27),
+    1: lambda: random.randint(17, 29),
     2: lambda: random.choice([1, 2]),
     3: lambda: random.randint(1, 12),
     4: lambda: random.randint(1, 8),

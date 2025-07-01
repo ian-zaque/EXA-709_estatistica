@@ -43,7 +43,7 @@ with open("DB/dados_textuais.json", "w", encoding="utf-8") as f:
     json.dump(dados_textuais, f, ensure_ascii=False, indent=4)
 
 resultados_quantitativos = {}
-resultados_categoricos = {}
+resultados_qualitativos = {}
 resultados_relacionaveis = {}
 questoes_quant = ["Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13"]
 questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 28)]
@@ -69,9 +69,9 @@ for q in questoes_quant:
 
     utils.histograma(float_df_numericos, q)
 
-print("Calculando dados categóricos... \n")
+print("Calculando dados qualitativos... \n")
 for q in questoes_cat:
-    resultados_categoricos[q] = {
+    resultados_qualitativos[q] = {
         'Frequência absoluta': utils.freq_absoluta(float_df_numericos, q).to_dict(),
         'Frequência relativa (%)': utils.freq_relativa(float_df_numericos, q).to_dict(),
         'Moda': utils.moda_categoria(float_df_numericos, q),
@@ -115,9 +115,9 @@ print("Salvandos dados calculados em XLS... \n")
 df_quant = pd.DataFrame(resultados_quantitativos).T
 df_quant.to_excel("DB/resultados_quantitativos.xlsx")
 
-# Categóricos (colocando cada resultado como string json para caber na célula do Excel)
-df_cat = pd.DataFrame({k: {sk: str(v[sk]) for sk in v} for k, v in resultados_categoricos.items()}).T
-df_cat.to_excel("DB/resultados_categoricos.xlsx")
+# Qualitativos (colocando cada resultado como string json para caber na célula do Excel)
+df_cat = pd.DataFrame({k: {sk: str(v[sk]) for sk in v} for k, v in resultados_qualitativos.items()}).T
+df_cat.to_excel("DB/resultados_qualitativos.xlsx")
 
 # Relacionáveis
 df_rel = pd.DataFrame({k: str(v) for k, v in resultados_relacionaveis.items()}.items(), columns=["Análise", "Resultado"])
