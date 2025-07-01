@@ -159,3 +159,37 @@ df_cat.to_excel("DB/resultados_qualitativos.xlsx")
 # Relacionáveis
 df_rel = pd.DataFrame({k: str(v) for k, v in resultados_relacionaveis.items()}.items(), columns=["Análise", "Resultado"])
 df_rel.to_excel("DB/resultados_relacionaveis.xlsx", index=False)
+
+# === SALVAR TODAS AS ESTATÍSTICAS QUANTITATIVAS EM UM ÚNICO ARQUIVO ===
+with open("DB/estatisticas_quantitativas.txt", "w", encoding="utf-8") as f:
+    f.write("QUESTÕES QUANTITATIVAS\n")
+    f.write("="*70 + "\n\n")
+
+    for q, resultados in resultados_quantitativos.items():
+        f.write(f"Questão {q} - {rotulos_questoes.get(int(q[1:]), q)}\n")
+        f.write("-"*60 + "\n")
+        for nome, valor in resultados.items():
+            if isinstance(valor, dict):
+                f.write(f"{nome}:\n")
+                for k, v in valor.items():
+                    f.write(f"  {k}: {v}\n")
+            else:
+                f.write(f"{nome}: {valor}\n")
+        f.write("\n")
+
+# === SALVAR TODAS AS ESTATÍSTICAS QUALITATIVAS EM UM ÚNICO ARQUIVO ===
+with open("DB/estatisticas_qualitativas.txt", "w", encoding="utf-8") as f:
+    f.write("QUESTÕES QUALITATIVAS\n")
+    f.write("="*70 + "\n\n")
+
+    for q, resultados in resultados_qualitativos.items():
+        f.write(f"Questão {q} - {rotulos_questoes.get(int(q[1:]), q)}\n")
+        f.write("-"*60 + "\n")
+        for nome, valor in resultados.items():
+            if isinstance(valor, dict):
+                f.write(f"{nome}:\n")
+                for k, v in valor.items():
+                    f.write(f"  {k}: {v}\n")
+            else:
+                f.write(f"{nome}: {valor}\n")
+        f.write("\n\n")

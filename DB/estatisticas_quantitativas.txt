@@ -1,0 +1,136 @@
+ESTATÍSTICAS DESCRITIVAS - QUESTÕES QUANTITATIVAS
+======================================================================
+
+Questão Q1 - Idade (anos)
+------------------------------------------------------------
+Contagem: 6000
+Média: 22.96
+Mediana: 23.0
+Moda: 18.0
+Mínimo: 17.0
+Máximo: 29.0
+Intervalo: 12.0
+Desvio padrão: 3.78
+Variância: 14.28
+Coeficiente de variação: 0.16
+Quartis:
+  Q1: 20.0
+  Q2: 23.0
+  Q3: 26.0
+  Q4: 29.0
+IQR: 6.0
+
+Questão Q3 - Semestre que está cursando
+------------------------------------------------------------
+Contagem: 6000
+Média: 6.49
+Mediana: 6.0
+Moda: 5.0
+Mínimo: 1.0
+Máximo: 12.0
+Intervalo: 11.0
+Desvio padrão: 3.46
+Variância: 11.94
+Coeficiente de variação: 0.53
+Quartis:
+  Q1: 4.0
+  Q2: 6.0
+  Q3: 10.0
+  Q4: 12.0
+IQR: 6.0
+
+Questão Q4 - Renda familiar
+------------------------------------------------------------
+Contagem: 6000
+Média: 4.45
+Mediana: 4.0
+Moda: 4.0
+Mínimo: 1.0
+Máximo: 8.0
+Intervalo: 7.0
+Desvio padrão: 2.28
+Variância: 5.21
+Coeficiente de variação: 0.51
+Quartis:
+  Q1: 2.0
+  Q2: 4.0
+  Q3: 6.0
+  Q4: 8.0
+IQR: 4.0
+
+Questão Q7 - Tempo de estudo diário (horas)
+------------------------------------------------------------
+Contagem: 6000
+Média: 4.01
+Mediana: 4.0
+Moda: 6.0
+Mínimo: 0.0
+Máximo: 8.0
+Intervalo: 8.0
+Desvio padrão: 2.59
+Variância: 6.73
+Coeficiente de variação: 0.65
+Quartis:
+  Q1: 2.0
+  Q2: 4.0
+  Q3: 6.0
+  Q4: 8.0
+IQR: 4.0
+
+Questão Q9 - Há quanto tempo utiliza computador?
+------------------------------------------------------------
+Contagem: 6000
+Média: 14.09
+Mediana: 14.0
+Moda: 23.0
+Mínimo: 3.0
+Máximo: 25.0
+Intervalo: 22.0
+Desvio padrão: 6.7
+Variância: 44.93
+Coeficiente de variação: 0.48
+Quartis:
+  Q1: 8.0
+  Q2: 14.0
+  Q3: 20.0
+  Q4: 25.0
+IQR: 12.0
+
+Questão Q11 - Quanto tempo estuda na internet (horas)
+------------------------------------------------------------
+Contagem: 6000
+Média: 3.96
+Mediana: 4.0
+Moda: 1.0
+Mínimo: 0.0
+Máximo: 8.0
+Intervalo: 8.0
+Desvio padrão: 2.57
+Variância: 6.6
+Coeficiente de variação: 0.65
+Quartis:
+  Q1: 2.0
+  Q2: 4.0
+  Q3: 6.0
+  Q4: 8.0
+IQR: 4.0
+
+Questão Q13 - Tempo conectado por dia (horas)
+------------------------------------------------------------
+Contagem: 6000
+Média: 5.52
+Mediana: 5.0
+Moda: 5.0
+Mínimo: 1.0
+Máximo: 10.0
+Intervalo: 9.0
+Desvio padrão: 2.87
+Variância: 8.26
+Coeficiente de variação: 0.52
+Quartis:
+  Q1: 3.0
+  Q2: 5.0
+  Q3: 8.0
+  Q4: 10.0
+IQR: 5.0
+

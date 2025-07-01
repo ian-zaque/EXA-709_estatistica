@@ -1,3 +1,3 @@
 Correlação de Pearson entre Q1 - Idade (anos) e Q9 - Há quanto tempo utiliza computador?
-Coeficiente de correlação: 0.0000
-p-valor: 0.93
+Coeficiente de correlação: -0.0200
+p-valor: 0.24
