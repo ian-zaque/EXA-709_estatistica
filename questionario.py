@@ -30,6 +30,30 @@ rotulos_questoes = {
     27: "Como você se sente em relação à informática?"
 }
 
+# Mapeamento DE/PARA baseado nas alternativas do questionário
+de_para = {
+    2: {1: "Masculino", 2: "Feminino"},
+    5: {1: "Diurno", 2: "Noturno"},
+    6: {1: "Sim", 2: "Não"},
+    8: {1: "Só", 2: "Amigos", 3: "Família"},
+    10: {1: "Sim", 2: "Não"},
+    12: {1: "Celular", 2: "Tablet", 3: "Computador/Notebook"},
+    14: {1: "Sim", 2: "Não"},
+    15: {1: "Sim", 2: "Não"},
+    16: {1: "Sim", 2: "Não"},
+    17: {1: "Sim", 2: "Não"},
+    18: {1: "Sim", 2: "Não"},
+    19: {1: "Sim", 2: "Não"},
+    20: {1: "Sim", 2: "Não"},
+    21: {1: "Sim", 2: "Não"},
+    22: {1: "Sim", 2: "Não"},
+    23: {1: "Sim", 2: "Não"},
+    24: {1: "Sim", 2: "Não"},
+    25: {1: "Sim", 2: "Não"},
+    26: {1: "Avanço tecnológico que melhora a vida", 2: "Forma rápida de se comunicar", 3: "Atrapalha, exige mais conhecimento" },
+    27: {1: "Entusiasmado, quer saber mais", 2: "Obrigada a aprender", 3: "Acho difícil e complicado"}
+}
+
 # Limites e tipos de respostas
 limites = {
     1: lambda: random.randint(17, 29),
@@ -59,28 +83,4 @@ limites = {
     25: lambda: random.choice([1, 2]),
     26: lambda: random.choice([1, 2, 3]),
     27: lambda: random.choice([1, 2, 3]),
-}
-
-# Mapeamento DE/PARA baseado nas alternativas do questionário
-de_para = {
-    2: {1: "Masculino", 2: "Feminino"},
-    5: {1: "Diurno", 2: "Noturno"},
-    6: {1: "Sim", 2: "Não"},
-    8: {1: "Só", 2: "Amigos", 3: "Família"},
-    10: {1: "Sim", 2: "Não"},
-    12: {1: "Celular", 2: "Tablet", 3: "Computador/Notebook"},
-    14: {1: "Sim", 2: "Não"},
-    15: {1: "Sim", 2: "Não"},
-    16: {1: "Sim", 2: "Não"},
-    17: {1: "Sim", 2: "Não"},
-    18: {1: "Sim", 2: "Não"},
-    19: {1: "Sim", 2: "Não"},
-    20: {1: "Sim", 2: "Não"},
-    21: {1: "Sim", 2: "Não"},
-    22: {1: "Sim", 2: "Não"},
-    23: {1: "Sim", 2: "Não"},
-    24: {1: "Sim", 2: "Não"},
-    25: {1: "Sim", 2: "Não"},
-    26: {1: "Avanço tecnológico que melhora a vida", 2: "Forma rápida de se comunicar", 3: "Atrapalha, exige mais conhecimento" },
-    27: {1: "Entusiasmado, quer saber mais", 2: "Obrigada a aprender", 3: "Acho difícil e complicado"}
 }
