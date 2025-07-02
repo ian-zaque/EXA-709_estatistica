@@ -32,10 +32,15 @@ rotulos_questoes = {
 
 # Mapeamento DE/PARA baseado nas alternativas do questionário
 de_para = {
+<<<<<<< HEAD
     1: { 1:"Menor que de 18 anos",2:"Entre 18 e 25 anos",3: "Entre 26 e 30 anos",4: "Entre 31 e 40 anos",5:"acima de 40 anos"},
     2: {1: "Masculino", 2: "Feminino", 3:"Prefiro não declarar"},
     4:{1:"Até 1 salário mínimo", 2:"1 a 2 salários mínimos",3:"2 a 4 salários mínimos",4:"Acima de 4 salários mínimos" ,5:"Prefiro não declarar"
 },
+=======
+    2: {1: "Masculino", 2: "Feminino"},
+    4: {1: "Até 1 salário mínimo", 2: "1 a 2 salários mínimos", 3: "2 a 4 salários mínimos", 4: "4 a 8 salários mínimos", 5: "Mais de 8 salários mínimos", },
+>>>>>>> 32fe26656d7516f8db43d52a774508afb369ddba
     5: {1: "Diurno", 2: "Noturno"},
     6: {1: "Sim", 2: "Não"},
     7:{ 1: "Até 1 hora",2: "Até 2 horas" ,3: "Até 3 horas" ,4: "Até 4 horas" ,5:"Acima de 4 horas"},
@@ -63,7 +68,7 @@ limites = {
     1: lambda: random.randint(17, 29),
     2: lambda: random.choice([1, 2]),
     3: lambda: random.randint(1, 12),
-    4: lambda: random.randint(1, 8),
+    4: lambda: random.randint(1, 5),
     5: lambda: random.choice([1, 2]),
     6: lambda: random.choice([1, 2]),
     7: lambda: random.randint(0, 8),
