@@ -48,20 +48,12 @@ df_numerico = pd.read_excel('DB/respostas_questionario_internet.xlsx')
 resultados_quantitativos = {}
 resultados_qualitativos = {}
 resultados_relacionaveis = {}
-<<<<<<< HEAD
 questoes_quant = ["Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13"]
 questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 27)]
-=======
-questoes_quant = ["Q1", "Q3", "Q7", "Q9", "Q11", "Q13"]
-questoes_cat = ["Q2", "Q4", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 28)]
->>>>>>> 32fe26656d7516f8db43d52a774508afb369ddba
-
 float_df_numericos = df_numerico.astype(float).round(2)
-
 print("Calculando dados quantitativos... \n")
 for q in questoes_quant:
     intervalo = utils.intervalo(float_df_numericos, q).astype(np.int64)
-
     resultados_quantitativos[q] = {
         'Contagem': utils.contagem(float_df_numericos, q),
         'Média': utils.media(float_df_numericos, q),
