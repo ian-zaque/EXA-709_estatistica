@@ -57,11 +57,11 @@ def iqr(df, coluna):
     q = quartis(df, coluna)
     return q['Q3'] - q['Q1']
 
-def histograma(df, coluna):
-    plt.figure(figsize=(10, 6))  # Tamanho maior da figura
+def histograma(df, coluna, intervalo):
+    # plt.figure(figsize=(10, 6))  # Tamanho maior da figura
     
     # Geração do histograma e captura dos valores
-    counts, bins, patches = plt.hist(df[coluna], bins=10, edgecolor='black')
+    counts, bins, patches = plt.hist(df[coluna], bins=intervalo, edgecolor='black')
 
     # Adiciona os valores acima das barras
     for count, bin_left, bin_right in zip(counts, bins[:-1], bins[1:]):
@@ -75,7 +75,7 @@ def histograma(df, coluna):
     plt.xlabel(titulo)
     plt.ylabel('Frequência')
     plt.grid(False)
-    plt.tight_layout()
+    # plt.tight_layout()
 
     # Salva e fecha
     plt.savefig(f'DB/histograma_{coluna}.png')

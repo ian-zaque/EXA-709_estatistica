@@ -1,6 +1,7 @@
 import questionario
 import utils
 import pandas as pd
+import numpy as np
 import json
 import os
 
@@ -47,13 +48,15 @@ with open("DB/dados_textuais.json", "w", encoding="utf-8") as f:
 resultados_quantitativos = {}
 resultados_qualitativos = {}
 resultados_relacionaveis = {}
-questoes_quant = ["Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13"]
-questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 28)]
+questoes_quant = ["Q1", "Q3", "Q7", "Q9", "Q11", "Q13"]
+questoes_cat = ["Q2", "Q4", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 28)]
 
 float_df_numericos = df_numerico.astype(float).round(2)
 
 print("Calculando dados quantitativos... \n")
 for q in questoes_quant:
+    intervalo = utils.intervalo(float_df_numericos, q).astype(np.int64)
+
     resultados_quantitativos[q] = {
         'Contagem': utils.contagem(float_df_numericos, q),
         'Média': utils.media(float_df_numericos, q),
@@ -61,7 +64,7 @@ for q in questoes_quant:
         'Moda': utils.moda(float_df_numericos, q),
         'Mínimo': utils.minimo(float_df_numericos, q),
         'Máximo': utils.maximo(float_df_numericos, q),
-        'Intervalo': utils.intervalo(float_df_numericos, q),
+        'Intervalo': intervalo,
         'Desvio padrão': utils.desvio_padrao(float_df_numericos, q),
         'Variância': utils.variancia(float_df_numericos, q),
         'Coeficiente de variação': utils.coef_var(float_df_numericos, q),
@@ -69,7 +72,7 @@ for q in questoes_quant:
         'IQR': utils.iqr(float_df_numericos, q)
     }
 
-    utils.histograma(float_df_numericos, q)
+    utils.histograma(float_df_numericos, q, intervalo)
 
 print("Calculando dados qualitativos... \n")
 for q in questoes_cat:

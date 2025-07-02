@@ -39,7 +39,7 @@ for (q in questoes_quant) {
   
   # Histograma
   x11()
-  hist(x, main = paste("Histograma de", q), xlab = q, col = c("blue", "red", "orange"))
+  hist(x, main = paste("Histograma de", q), xlab = q, labels=TRUE, col = c("blue", "red", "orange"))
 }
 
 # ================================
@@ -95,3 +95,77 @@ dados$cluster <- modelo_kmeans$cluster
 # Perfil dos clusters
 perfil <- aggregate(dados_cluster, by = list(cluster = dados$cluster), mean)
 print(perfil)
+
+
+
+# === Carregar dados ===
+#dados <- read_excel("dados_numericos.xlsx")
+#dados <- dados %>% mutate(across(everything(), as.numeric))
+
+# === Criar pasta para salvar os resultados ===
+#dir.create("resultados_txt", showWarnings = FALSE)
+
+# === Correlações ===
+sink("correlacoes.txt")
+cat("Correlação Q1 (Idade) ~ Q13 (Tempo conectado):\n")
+print(cor.test(dados$Q1, dados$Q13, method = "pearson"))
+
+cat("\nCorrelação Q9 (Tempo de uso do computador) ~ Q11 (Tempo estudo internet):\n")
+print(cor.test(dados$Q9, dados$Q11, method = "pearson"))
+
+cat("\nCorrelação Q7 (Tempo de estudo diário) ~ Q11 (Tempo estudo internet):\n")
+print(cor.test(dados$Q7, dados$Q11, method = "pearson"))
+sink()
+
+# === Qui-quadrado ===
+sink("qui_quadrado.txt")
+cat("Qui-quadrado Q10 x Q14:\n")
+print(chisq.test(table(dados$Q10, dados$Q14)))
+
+cat("\nQui-quadrado Q14 x Q18:\n")
+print(chisq.test(table(dados$Q14, dados$Q18)))
+
+cat("\nQui-quadrado Q15 x Q21:\n")
+print(chisq.test(table(dados$Q15, dados$Q21)))
+
+cat("\nQui-quadrado Q16 x Q24:\n")
+print(chisq.test(table(dados$Q16, dados$Q24)))
+sink()
+
+# === Teste t e ANOVA ===
+sink("testes_t_anova.txt")
+cat("Teste t Q2 (Sexo) ~ Q13 (Tempo conectado):\n")
+print(t.test(Q13 ~ as.factor(Q2), data = dados))
+
+cat("\nTeste t Q5 (Período) ~ Q13 (Tempo conectado):\n")
+print(t.test(Q13 ~ as.factor(Q5), data = dados))
+
+cat("\nANOVA Q26 (O que representa o computador) ~ Q11 (Tempo estudo internet):\n")
+print(summary(aov(Q11 ~ as.factor(Q26), data = dados)))
+sink()
+
+# === Regressão Linear ===
+sink("regressao_linear.txt")
+cat("Regressão linear: Q13 ~ Q1 + Q9 + Q6\n")
+modelo <- lm(Q13 ~ Q1 + Q9 + as.factor(Q6), data = dados)
+print(summary(modelo))
+sink()
+
+# === Clusterização ===
+sink("clusterizacao.txt")
+dados_cluster <- dados[, paste0("Q", 14:25)]
+dados_cluster <- na.omit(dados_cluster)
+set.seed(123)
+modelo_cluster <- kmeans(dados_cluster, centers = 3)
+dados$cluster <- modelo_cluster$cluster
+cat("Clusterização com k = 3 (base Q14 a Q25)\n")
+print(aggregate(dados_cluster, by = list(cluster = dados$cluster), mean))
+sink()
+
+# === (Opcional) Análise de correspondência múltipla ===
+# install.packages("FactoMineR")
+# library(FactoMineR)
+# acm_data <- dados[, c("Q5", "Q12", "Q24")]
+# acm_data[] <- lapply(acm_data, as.factor)
+# res.mca <- MCA(acm_data, graph = TRUE)
+

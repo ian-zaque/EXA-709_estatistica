@@ -1,5 +1,5 @@
 Média de Q13 - Tempo conectado por dia (horas) por tipo de Q12 - Dispositivo móvel mais acessado
 
-Média Celular: 5.47
-Média Tablet: 5.75
-Média Computador/Notebook: 5.23
+Média Celular: 6.21
+Média Tablet: 5.20
+Média Computador/Notebook: 5.62
