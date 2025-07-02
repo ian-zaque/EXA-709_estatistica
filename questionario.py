@@ -11,9 +11,9 @@ rotulos_questoes = {
     8: "Mora com quem?",
     9: "Há quanto tempo utiliza computador?",
     10: "Você costuma acessar a Internet?",
-    11: "Quanto tempo estuda na internet (horas)",
-    12: "Dispositivo móvel mais acessado",
-    13: "Tempo conectado por dia (horas)",
+    11: "Quanto tempo estuda na internet (horas)?",
+    12: "Dispositivo móvel mais acessado?",
+    13: "Tempo conectado por dia (horas)?",
     14: "Você utiliza a internet para trabalho?",
     15: "Você utiliza a internet para conversar com amigos?",
     16: "Você utiliza a internet para conversar com desconhecidos?",
@@ -34,15 +34,16 @@ rotulos_questoes = {
 de_para = {
     1: { 1:"Menor que de 18 anos",2:"Entre 18 e 25 anos",3: "Entre 26 e 30 anos",4: "Entre 31 e 40 anos",5:"acima de 40 anos"},
     2: {1: "Masculino", 2: "Feminino", 3:"Prefiro não declarar"},
-    4:{1:"Até 1 salário mínimo", 2:"1 a 2 salários mínimos",3:"2 a 4 salários mínimos",4:"Acima de 4 salários mínimos" ,5:"Prefiro não declarar"
-},
+    4:{1:"Até 1 salário mínimo", 2:"1 a 2 salários mínimos",3:"2 a 4 salários mínimos",4:"Acima de 4 salários mínimos" ,5:"Prefiro não declarar"},
     5: {1: "Diurno", 2: "Noturno"},
     6: {1: "Sim", 2: "Não"},
     7:{ 1: "Até 1 hora",2: "Até 2 horas" ,3: "Até 3 horas" ,4: "Até 4 horas" ,5:"Acima de 4 horas"},
     8: {1: "Só", 2: "Amigos", 3: "Família"},
+    9: {1: "Menos de 1 ano", 2: "Entre 1 e 3 anos", 3: "Entre 4 e 6 anos", 4: "Acima de 6 anos"},
     10: {1: "Sim", 2: "Não"},
     11:{ 1: "Até 1 hora",2: "Até 2 horas" ,3: "Até 3 horas" ,4: "Até 4 horas" ,5:"Acima de 4 horas"},
     12: {1: "Celular", 2: "Tablet", 3: "Computador/Notebook"},
+    13:{ 1: "Até 1 hora",2: "Até 2 horas" ,3: "Até 3 horas" ,4: "Até 4 horas" ,5:"Acima de 4 horas"},
     14: {1: "Sim", 2: "Não"},
     15: {1: "Sim", 2: "Não"},
     16: {1: "Sim", 2: "Não"},
@@ -61,8 +62,8 @@ de_para = {
 
 # Limites e tipos de respostas
 limites = {
-    1: lambda: random.randint(17, 29),
-    2: lambda: random.choice([1, 2]),
+    1: lambda: random.randint(1, 5),
+    2: lambda: random.choice([1, 2, 3]),
     3: lambda: random.randint(1, 12),
     4: lambda: random.randint(1, 8),
     5: lambda: random.choice([1, 2]),

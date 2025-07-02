@@ -48,9 +48,10 @@ df_numerico = pd.read_excel('DB/respostas_questionario_internet.xlsx')
 resultados_quantitativos = {}
 resultados_qualitativos = {}
 resultados_relacionaveis = {}
-questoes_quant = ["Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13"]
-questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 27)]
+questoes_quant = ["Q3"]
+questoes_cat = ["Q1", "Q2"] + [f"Q{i}" for i in range(4, 28)]
 float_df_numericos = df_numerico.astype(float).round(2)
+
 print("Calculando dados quantitativos... \n")
 for q in questoes_quant:
     intervalo = utils.intervalo(float_df_numericos, q).astype(np.int64)
@@ -133,7 +134,7 @@ for grupo_col, valor_col in pares_media:
             f.write(f"Média {rotulo}: {media:.2f}\n")
 
 # 5. Clusterização
-colunas_cluster = [f"Q{i}" for i in range(5, 27)]
+colunas_cluster = [f"Q{i}" for i in range(5, 28)]
 float_df_numericos["cluster"], perfil_clusters = utils.clusterizar(float_df_numericos, colunas_cluster)
 resultados_relacionaveis["perfil_clusters"] = perfil_clusters.to_dict(orient="index")
 
