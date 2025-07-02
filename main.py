@@ -14,41 +14,41 @@ limites = questionario.limites
 de_para = questionario.de_para
 
 # Geração dos dados
-dados_numericos = []
-dados_textuais = []
+# dados_numericos = pd.read_excel("DB/respostas_questionario_internet.xlsx")
+# dados_textuais = []
 
-print(f"Gerando {utils.TOTAL_NUMBER} dados aleatórios... \n")
+# print(f"Gerando {utils.TOTAL_NUMBER} dados aleatórios... \n")
 
-for _ in range(utils.TOTAL_NUMBER):
-    entrada_numerica = {f"Q{q}": limites[q]() for q in range(1, 28)}
-    entrada_textual = {
-        f"Q{q}": de_para[q][entrada_numerica[f"Q{q}"]] if q in de_para else entrada_numerica[f"Q{q}"]
-        for q in range(1, 28)
-    }
+# for _ in range(utils.TOTAL_NUMBER):
+#     entrada_numerica = {f"Q{q}": limites[q]() for q in range(1, 28)}
+#     entrada_textual = {
+#         f"Q{q}": de_para[q][entrada_numerica[f"Q{q}"]] if q in de_para else entrada_numerica[f"Q{q}"]
+#         for q in range(1, 28)
+#     }
 
-    dados_numericos.append(entrada_numerica)
-    dados_textuais.append(entrada_textual)
+#     dados_numericos.append(entrada_numerica)
+#     dados_textuais.append(entrada_textual)
 
 # Criação de DataFrames
-df_numerico = pd.DataFrame(dados_numericos)
-df_textual = pd.DataFrame(dados_textuais)
+df_numerico = pd.read_excel('DB/respostas_questionario_internet.xlsx')
+# df_textual = pd.DataFrame(dados_textuais)
 
-# Salvando arquivos
-print("Salvando arquivos XLS... \n")
-df_numerico.to_excel("DB/dados_numericos.xlsx", index=False)
-df_textual.to_excel("DB/dados_textuais.xlsx", index=False)
+# # Salvando arquivos
+# print("Salvando arquivos XLS... \n")
+# df_numerico.to_excel("DB/dados_numericos.xlsx", index=False)
+# df_textual.to_excel("DB/dados_textuais.xlsx", index=False)
 
-with open("DB/dados_numericos.json", "w", encoding="utf-8") as f:
-    json.dump(dados_numericos, f, ensure_ascii=False, indent=4)
+# with open("DB/dados_numericos.json", "w", encoding="utf-8") as f:
+#     json.dump(dados_numericos, f, ensure_ascii=False, indent=4)
 
-with open("DB/dados_textuais.json", "w", encoding="utf-8") as f:
-    json.dump(dados_textuais, f, ensure_ascii=False, indent=4)
+# with open("DB/dados_textuais.json", "w", encoding="utf-8") as f:
+#     json.dump(dados_textuais, f, ensure_ascii=False, indent=4)
 
 resultados_quantitativos = {}
 resultados_qualitativos = {}
 resultados_relacionaveis = {}
 questoes_quant = ["Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13"]
-questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 28)]
+questoes_cat = ["Q2", "Q5", "Q6", "Q8", "Q10", "Q12"] + [f"Q{i}" for i in range(14, 27)]
 
 float_df_numericos = df_numerico.astype(float).round(2)
 
