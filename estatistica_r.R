@@ -21,8 +21,8 @@ dados <- dados %>% mutate(across(everything(), as.numeric))
 # ================================
 # 2. Listas de questões
 # ================================
-questoes_quant <- c("Q1", "Q3", "Q4", "Q7", "Q9", "Q11", "Q13")
-questoes_cat <- c("Q2", "Q5", "Q6", "Q8", "Q10", "Q12", paste0("Q", 14:27))
+questoes_quant <- c("Q1", "Q3", "Q7", "Q9", "Q11", "Q13")
+questoes_cat <- c("Q2", "Q4", "Q5", "Q6", "Q8", "Q10", "Q12", paste0("Q", 14:27))
 
 # ================================
 # 3. Análise Quantitativa
