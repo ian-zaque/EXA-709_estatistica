@@ -196,3 +196,51 @@ def clusterizar(df, cols, n_clusters=3):
     kmeans = KMeans(n_clusters=n_clusters, random_state=0, n_init="auto")
     df['cluster'] = kmeans.fit_predict(X_norm)
     return df['cluster'], df.groupby('cluster')[cols].mean().round(2)
+
+def plot_barras_agrupadas(df, col_base, col_grupo, titulo=None, nome_arquivo=None):
+    """
+    Gera gráfico de barras agrupadas entre duas colunas categóricas de um DataFrame.
+
+    Parâmetros:
+    - df: pandas.DataFrame com os dados
+    - col_base: coluna para eixo X (categorias principais)
+    - col_grupo: coluna para as barras agrupadas (subcategorias)
+    - titulo: título do gráfico (opcional)
+    - nome_arquivo: caminho para salvar o gráfico (opcional)
+    """
+    # Agrupar os dados
+    grupo = df.groupby([col_base, col_grupo]).size().unstack(fill_value=0)
+    
+    # Preparar o gráfico
+    categorias_base = grupo.index.astype(str)
+    subcategorias = grupo.columns
+    x = np.arange(len(categorias_base))  # posições das categorias base
+    largura = 0.8 / len(subcategorias)   # largura de cada barra
+    cores = plt.cm.Set2.colors
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    for i, subcat in enumerate(subcategorias):
+        barras = ax.bar(x + i * largura, grupo[subcat], width=largura,
+           label=f'{questionario.de_para[int(col_grupo[1:])][int(subcat)]}', color=cores[i % len(cores)])
+        
+        # Adicionar a frequência em cima de cada barra
+        for barra in barras:
+            altura = barra.get_height()
+            ax.text(
+                barra.get_x() + barra.get_width() / 2,  # posição x do centro da barra
+                altura,                                # posição y logo acima da barra
+                str(int(altura)),                      # texto a ser exibido
+                ha='center', va='bottom', fontsize=9
+            )
+
+    labels = [de_para[int(col_base[1:])].get(int(k), str(k)) for k in de_para[int(col_base[1:])]]
+    # Configurar eixos e rótulos
+    ax.set_xticks(x + largura * (len(subcategorias) - 1) / 2)
+    ax.set_xticklabels(labels)
+    ax.set_ylabel("Frequência")
+    ax.set_title(titulo or f"Distribuição de {col_base} por {col_grupo}")
+    ax.legend()
+    plt.tight_layout()
+
+    if nome_arquivo:
+        plt.savefig("DB/"+nome_arquivo)

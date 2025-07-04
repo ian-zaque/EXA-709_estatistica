@@ -85,6 +85,27 @@ for q in questoes_cat:
     utils.grafico_barras(float_df_numericos, q)
 
 print("Calculando dados relacionaveis... \n")
+utils.plot_barras_agrupadas(float_df_numericos, "Q1", "Q2", "Relação entre idade e sexo", "relacao_q1_q2")
+utils.plot_barras_agrupadas(float_df_numericos, "Q1", "Q9", "Relação entre idade e há quanto tempo usa o computador", "relacao_q1_q9")
+# utils.plot_barras_agrupadas(float_df_numericos, "Q1", "Q11", "Relação entre idade e tempo de estudo no computador", "relacao_q1_q11")
+utils.plot_barras_agrupadas(float_df_numericos, "Q1", "Q13", "Relação entre idade e tempo conectado por dia", "relacao_q1_q13")
+# utils.plot_barras_agrupadas(float_df_numericos, "Q1", "Q23", "Relação entre idade e se pensa se a internet atrapalha sua formação", "relacao_q1_q23")
+utils.plot_barras_agrupadas(float_df_numericos, "Q2", "Q6", "Relação entre sexo e se trabalha", "relacao_q2_q6")
+utils.plot_barras_agrupadas(float_df_numericos, "Q9", "Q2", "Relação entre sexo e há quanto tempo usa o computador", "relacao_q9_q2")
+# utils.plot_barras_agrupadas(float_df_numericos, "Q2", "Q12", "Relação entre sexo e dispositivo mais usado", "relacao_q2_q12")
+# utils.plot_barras_agrupadas(float_df_numericos, "Q2", "Q13", "Relação entre sexo e tempo conectado por dia", "relacao_q2_q13")
+utils.plot_barras_agrupadas(float_df_numericos, "Q4", "Q8", "Relação entre renda familiar e com quem mora", "relacao_q4_q8")
+utils.plot_barras_agrupadas(float_df_numericos, "Q4", "Q9", "Relação entre renda familiar e há quanto tempo usa o computador", "relacao_q4_q9")
+utils.plot_barras_agrupadas(float_df_numericos, "Q4", "Q16", "Relação entre renda familiar e se trabalha", "relacao_q4_q16")
+utils.plot_barras_agrupadas(float_df_numericos, "Q7", "Q6", "Relação entre se trabalha e tempo de estudo diário", "relacao_q7_q6")
+utils.plot_barras_agrupadas(float_df_numericos, "Q12", "Q6", "Relação entre se trabalha e dispositivo mais usado", "relacao_q12_q6")
+utils.plot_barras_agrupadas(float_df_numericos, "Q11", "Q18", "Relação entre tempo de estudo no computador e se utiliza a internet para pesquisas acadêmicas", "relacao_11_q18")
+utils.plot_barras_agrupadas(float_df_numericos, "Q13", "Q12", "Relação entre dispositivo mais usado e tempo conectado por dia", "relacao_q13_q12")
+utils.plot_barras_agrupadas(float_df_numericos, "Q12", "Q15", "Relação entre dispositivo mais usado e se utiliza a internet para conversar com amigos", "relacao_q12_q15")
+
+
+
+
 
 # === RELACIONÁVEIS ===
 # 1. Correlação entre idade e tempo de uso do computador

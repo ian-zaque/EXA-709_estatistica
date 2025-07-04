@@ -32,7 +32,7 @@ rotulos_questoes = {
 
 # Mapeamento DE/PARA baseado nas alternativas do questionário
 de_para = {
-    1: { 1:"Menor que de 18 anos",2:"Entre 18 e 25 anos",3: "Entre 26 e 30 anos",4: "Entre 31 e 40 anos",5:"acima de 40 anos"},
+    1: { 1:"Menor que de 18 anos",2:"Entre 18 e 25 anos",3: "Entre 26 e 30 anos",4: "Entre 31 e 40 anos",5:"Acima de 40 anos"},
     2: {1: "Masculino", 2: "Feminino", 3:"Prefiro não declarar"},
     4:{1:"Até 1 salário mínimo", 2:"1 a 2 salários mínimos",3:"2 a 4 salários mínimos",4:"Acima de 4 salários mínimos" ,5:"Prefiro não declarar"},
     5: {1: "Diurno", 2: "Noturno"},
